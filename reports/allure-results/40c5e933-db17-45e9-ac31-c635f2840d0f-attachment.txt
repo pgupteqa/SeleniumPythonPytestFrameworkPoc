@@ -1,0 +1,3 @@
+<simple_salesforce.api.Salesforce object at 0x0000019283277A10>
+<simple_salesforce.api.Salesforce object at 0x000001928331C2D0>
+<simple_salesforce.api.Salesforce object at 0x000001928331DD10>
