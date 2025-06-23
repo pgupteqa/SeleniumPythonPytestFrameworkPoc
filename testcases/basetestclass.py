@@ -9,8 +9,12 @@ import pytest
 ## Used to remove warning messages after the test execution
 sys.path.append( os.path.dirname(os.path.dirname( os.path.abspath( __file__ ) ) ) )
 
-@pytest.mark.usefixtures("browser_setup", "log_on_failure")
+@pytest.mark.usefixtures("log_on_failure")
 class BaseTest:
+
+    @pytest.fixture(autouse=True)
+    def setup_driver(self, browser_setup):
+        self.driver = browser_setup  # Only this assignment is needed
 
     @staticmethod
     def get_data_from_json(path,keyname):
